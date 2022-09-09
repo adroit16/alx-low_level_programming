@@ -1,30 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - print single digit numbers starting from 0
+ * main - Prints all possible combinations of two different digits,
+ *       in ascending order, separated by a comma followed by a space.
  *
- * Return: returns zero at the end
+ * Return: Always 0
  */
 int main(void)
 {
-	int i, j;
+	int digit1, digit2;
 
-	for (i = 48; i <= 56; i++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (j = 49; j <= 57; j++)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			if (j > i)
-			{
-				putchar(i);
-				putchar(j);
-				if (i != 56 || m != 57)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
+
