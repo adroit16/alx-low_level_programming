@@ -2,24 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Progarm compilation begins from main
- * Description: Program to print all possible combination of numbers
+ * main - Entry point
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a, b;
+	int d;
 
-	for (a = 48; a <= 57; a++)
+	for (d = 0; d < 90; d++)
 	{
-		for (b = 49; b <= 57; b++)
+		for ()
 		{
-			if (a != b && b > a)
-			{
-				putchar(a);
-				putchar(b);
-				putchar(',');
-			}
+			putchar((d / 10) + '0');
+			putchar((d % 10) + '0');
+		}
+		if (d != 89)
+		{
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
