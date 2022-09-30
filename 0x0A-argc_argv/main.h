@@ -2,6 +2,6 @@
 #define FILE_MAIN
 
 int _putchar(char c);
-int _atoi(chat *s);
+int _atoi(char *s);
 
 #endif
